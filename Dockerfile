@@ -64,6 +64,9 @@ ENV NUMBER_OF_MASTERS 1
 ENV MAX_LOCAL_STORAGE_NODES 1
 ENV SHARD_ALLOCATION_AWARENESS ""
 ENV SHARD_ALLOCATION_AWARENESS_ATTR ""
+ENV DISCOVERY_SERVICE elasticsearch-discovery
+
+RUN chgrp -Rf root /elasticsearch/ && chmod -Rf g+w /elasticsearch
 
 # Volume for Elasticsearch data
 VOLUME ["/data"]

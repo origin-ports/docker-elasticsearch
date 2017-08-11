@@ -39,6 +39,6 @@ if [ ! -z "${SHARD_ALLOCATION_AWARENESS_ATTR}" ]; then
 fi
 
 # run
-chown -R elasticsearch:elasticsearch $BASE
-chown -R elasticsearch:elasticsearch /data
-su-exec elasticsearch $BASE/bin/elasticsearch
+# chown -R elasticsearch:elasticsearch $BASE
+# chown -R elasticsearch:elasticsearch /data
+$BASE/bin/elasticsearch
